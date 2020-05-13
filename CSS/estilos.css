@@ -1,12 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 body{
-    background-image: url("https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max");
-    background-size: auto 100vh;
-    height: 100vh;
-    font-family: Arial;
+  background-color: #f1f1f1;
+  /*background-image: url("https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max");*/
+  background-size: 100vw auto;
+  height: 100vh;
+  font-family: 'Poppins', Helvetica, sans-serif;
   }
-  
+
   .menu{
-    background-color: white;
+    background-color: #f1f1f1;
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   
   .menu ul{
@@ -17,9 +37,19 @@ body{
   .menu li{
     list-style: none;
   }
+  
+  .menu a{
+    display: block;
+    padding: 10px 20px;
+  }
 
   a{
     text-decoration: none;
+    color: #00a8ff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.5s;
   }
 
   a:houver {
@@ -28,10 +58,75 @@ body{
   
   .site-subtitle,
   .site-title{
-    color: whitesmoke;
     text-align: center;
+    font-size: 2em;
+  }
+
+  .site-title{
+    font-weight: bolder;
   }
   
   .site-subtitle{
+    color: #00a8ff;
+    font-weight: lighter;
     font-style: italic;
   }
+
+  
+  .portfolio{
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  }
+
+  .img-portfolio { 
+    height: 350px;
+    width: 350px;
+    border-radius: 4px;
+    padding: 0 15px;
+  }
+
+  @media (min-height: 600px) {
+    .img-portfolio {
+      height: 250px;
+      width: 250px;
+    }
+  }
+  
+
+  @media (min-width: 600px){
+    .portfolio h2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .portfolio div{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+   
+  @media(min-width: 400px){
+    body{
+      font-size: 18px;
+    }
+  }
+
+  @media(min-width: 600px){
+    body{
+      font-size: 22px;
+    }
+  }
+
+  
+
+:root {
+  --text-color: #2f3640;
+  --link-color: #353b48;
+  --second-color: #00a8ff;
+  --second-color-hover: #0097e6
+}
