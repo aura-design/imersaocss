@@ -14,6 +14,11 @@ header{
 
 }
 
+.home .site-title{
+  padding-top: 45vh;
+}
+
+
 body{
   background-color: #f1f1f1;
   /*background-image: url("https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max");*/
@@ -27,6 +32,7 @@ body{
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
   }
   
   .menu ul{
@@ -41,6 +47,13 @@ body{
   .menu a{
     display: block;
     padding: 10px 20px;
+    transition: 500ms;
+  }
+
+  .menu a:active,
+  .menu a:hover{
+    background-color: #FFA07A;
+    color: #f1f1f1;
   }
 
   a{
@@ -48,18 +61,22 @@ body{
     color: #FFA07A;
     font-weight: 600;
     text-transform: uppercase;
-    text-decoration: none;
-    transition: all 0.5s;
-  }
-
-  a:houver {
-      text-decoration: underline;
-  }
-  
+    }
+ 
   .site-subtitle,
   .site-title{
     text-align: center;
     font-size: 2em;
+    animation: ease-in 500ms intro forwards;
+  }
+
+  @keyframes intro{
+    0%{
+      transform: scale(0.2);
+    }
+    100%{
+      transform: scale(1);
+    }
   }
 
   .site-title{
@@ -86,23 +103,81 @@ body{
     }
   }
   
+  .sobre,
+  .contato,
   .portfolio{
-    background-color: #00BFFF;
+    /*background-color: yellow;*/
     padding: 2em;
+    margin-top: 1.2em;
     margin-bottom: 1.5em;
     font-size: 1em;
-    height: 100vhm auto;
+    min-height: auto;
   }
 
+  .sobre h2,
+  .contato h2,
   .portfolio h2{
     align-items: center;
-    color: whitesmoke;
+    color: #00BFFF;
     display: flex;
     font-family:'Poppins', sans-serif;
     font-weight: 700;
+    margin-top: 20px;
     margin-bottom: 40px;
     text-transform: uppercase;
     justify-content: center;
+  }
+
+  /*essa seção é a do sobre*/
+
+  .sobre .apresentacao{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 180px auto;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .apresentacao{
+    font-family:'Jost', sans-serif;
+    padding: 20px;
+  }
+
+/*maluquise q eu achei na internet que resolve o problema dos itens na msm coluna*/
+  .apresentacao {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto / auto;
+    grid-template-areas: 
+      "a a b"
+      "a a b";
+  }
+  
+  .item1{
+    grid-area: a;
+  }
+
+  .item2{
+    grid-area: b;
+  }
+
+  .img-sobre{
+    border-radius: 100px;
+    object-fit: cover;
+    height: 180px;
+    width: 180px;
+
+    animation: ease-in 500ms Foto forwards;  
+  }
+
+  @keyframes Foto{
+    0%{
+      transform: scale(0.2);
+    }
+
+    100%{
+      transform: scale(1);
+    } 
   }
 
   .portfolio figure{
@@ -112,9 +187,15 @@ body{
   .img-portfolio {
     border-radius: 4px;
     object-fit: cover;
+    /*object-position: left-bottom;*/
     height: 300px;
     width: 200px;
-    
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:active,
+  .img-portfolio:hover{
+    transform: scale(1.1);
   }
 
   @media (min-width: 600px) {
@@ -156,12 +237,20 @@ body{
     }
   }
 
-:root {
-  --text-color: #2f3640;
-  --link-color: #353b48;
-  --second-color: #00a8ff;
-  --second-color-hover: #0097e6
-}
+  .contato{
+    text-align: center;
+  }
+
+  .contato a{
+    font-size: 5em;
+    transition: text-shadow 500ms;
+  }
+
+  .contato a:active,
+  .contato a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(90, 90, 90, 0.5);
+  }
 
 /*
   --font-family: 'Anton', sans-serif;

@@ -6,22 +6,40 @@
     <title>Laura Dias</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jost&family=Poppins:wght@500;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/aeefcc706e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class="menu">
           <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portfólio</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <div>
-        <h1 class="site-title">Laura Dias</h1>
-        <h2 class="site-subtitle">Jr. Front-end Developer</h2>
-        </div>
+        <section  class="home" id="home">
+          <div>
+            <h1 class="site-title">Laura Dias</h1>
+            <h2 class="site-subtitle">Jr. Front-end Developer</h2>
+          </div>
+        </section>
       </header>
-      <section class="portfolio">
+      <section class="sobre" id="sobre">
+        <h2>Sobre</h2>
+        <div class= "apresentacao">
+            <div class="item1">
+            <figure>
+                <img class="img-sobre" src="./img/ME.jpg" alt="Laura">
+            </figure>
+            </div>
+            <div class="item2">
+              <h3>Olá meu nome é Laura,</h3>
+              <p>É um prazer recebe-lo em minha página e lhe apresentar um pouquinho sobre mim. Aqui estão dispostos alguns dos meus projetos e alguns estudos.<br>Nesse momento aprendendo front-end e construindo esse site.</p>
+            </div>
+        </div>
+      </section>
+      <section class="portfolio" id="portfolio">
         <h2>Portfólio</h2>
         <div class="grid">
           <figure>
@@ -41,6 +59,23 @@
             <figcaption>Projetos pessoais</figcaption>
           </figure>
        </div>
+      </section>
+      <section class="contato" id="contato">
+        <h2>Contato</h2>
+        <div class="grid icons">
+          <a target="_blank" href="https://github.com/aura-design">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/experiencia.artistica/">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/laura-ferreira-dias-2ab718143/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:experiencia.artistica2018@gmail.com">
+            <i class="fas fa-at"></i>
+          </a>
+        </div>
       </section>
 </body>
 </html>
